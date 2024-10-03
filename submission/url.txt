@@ -1,1 +1,1 @@
-https://turbo-robot-wj557rj9vvc974j.github.dev/
+https://dashboard-rsqi.streamlit.app/
