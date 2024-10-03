@@ -1,0 +1,108 @@
+Proyek Analisis Data: Bike Sharing Dataset
+
+Data Wrangling
+Gathering Data
+Insight:
+- Memuat tabel day.csv pada data Bike Sharing Dataset.
+Insight:
+- Memuat tabel hour.csv pada data Bike Sharing Dataset.
+
+Assessing Data
+Insight:
+- Menilai Tabel day_df
+Insight:
+- Menilai Tabel hour_df
+
+Cleaning Data
+Insight:
+- Membersihkan tabel day_df
+Insight:
+- Membersihkan tabel hour_df
+Insight: 
+Inaccurate Data pada cnt (jumlah peminjaman) dalam hour_df
+
+Langkah Pembersihan Data untuk Mengatasi Anomali pada cnt:
+- Identifikasi Anomali (Misalnya, kita asumsikan peminjaman diatas 1,5 kali rata-rata sebagai anomali)
+- Hapus Anomali (Setelah mengidentifikasi nilai yang dianggap anomali, kita dapat menghapusnya dari dataset)
+- Verifikasi Pembersihan (Periksa kembali data setelah pembersihan untuk memastikan bahwa anomali telah dihapus)
+
+Insight: 
+Memperbaiki Tipe Data dteday(datetime) dalam hour_df
+
+Langkah-langkah untuk memperbaiki tipe data di tabel hour_df:
+- Tentukan Kolom yang Perlu Menjadi Tipe Datetime.
+- Ubah Tipe Data Kolom yang Sesuai.
+
+Exploratory Data Analysis (EDA)
+Insight:
+- Mengelompokkan berdasarkan 'season'
+- Menghitung agregasi peminjaman
+Insight:
+- Mengelompokkan berdasarkan 'year'
+- Menghitung agregasi peminjaman
+Insight:
+- Mengelompokkan berdasarkan 'month'
+- Menghitung agregasi peminjaman
+Insight:
+- Mengelompokkan berdasarkan 'weekday'
+- Menghitung agregasi peminjaman
+Insight:
+- Mengelompokkan berdasarkan 'holiday'
+- Menghitung agregasi peminjaman
+Insight:
+- Mengelompokkan berdasarkan 'weathersit'
+- Menghitung agregasi peminjaman
+
+Visualization & Explanatory Analysis
+Pertanyaan 1: Bagaimana pengaruh cuaca terhadap jumlah pengguna sepeda kasual dan terdaftar di berbagai musim?
+
+Insight:
+Penjelasan Musim:
+Musim Semi: Musim yang dipetakan ke nomor 1.
+Musim Panas: Musim yang dipetakan ke nomor 2.
+Musim Gugur: Musim yang dipetakan ke nomor 3.
+Musim Dingin: Musim yang dipetakan ke nomor 4
+
+Pengguna Kasual:
+- Musim Panas dan Musim Gugur menunjukkan jumlah pengguna kasual tertinggi, terutama ketika cuaca baik (kondisi cuaca = 1: Cerah, Sedikit Awan). Ini mengindikasikan bahwa pengguna kasual lebih mungkin menyewa sepeda saat cuaca mendukung, terutama di musim yang lebih hangat.
+- Di Musim Dingin, jumlah pengguna kasual menurun drastis. Ketika cuaca buruk (kondisi cuaca = 3: Hujan ringan, Salju ringan), penggunaan sepeda oleh pengguna kasual sangat sedikit. Ini menunjukkan bahwa cuaca dingin dan buruk sangat mempengaruhi keputusan pengguna kasual untuk menggunakan sepeda.
+
+Secara keseluruhan, pengguna kasual sangat sensitif terhadap perubahan cuaca dan musim, lebih cenderung menyewa sepeda di musim panas dan gugur, dengan penurunan tajam di musim dingin dan kondisi cuaca buruk.
+
+Pengguna Terdaftar:
+- Pengguna terdaftar menunjukkan pola yang lebih stabil dibandingkan dengan pengguna kasual, tetapi tetap terdapat penurunan jumlah penyewaan di musim dingin dan saat cuaca buruk. Namun, penurunan ini tidak se-drastis pengguna kasual.
+- Pengguna terdaftar lebih mungkin untuk terus menggunakan layanan sepeda bahkan saat kondisi cuaca tidak ideal, terutama di Musim Panas dan Musim Gugur. Hal ini menunjukkan bahwa pengguna terdaftar mungkin menggunakan sepeda untuk perjalanan rutin seperti bekerja atau kegiatan sehari-hari, yang membuat mereka lebih konsisten.
+
+Walaupun jumlah penyewaan menurun pada cuaca buruk, pengguna terdaftar masih lebih aktif dibandingkan pengguna kasual, menunjukkan bahwa mereka mungkin memiliki motivasi yang lebih kuat (misalnya, komitmen berlangganan, transportasi harian).
+
+Pertanyaan 2: Apakah terdapat pola penggunaan sepeda yang signifikan antara hari kerja dan hari libur?
+
+Insight:
+
+Penggunaan Sepeda pada Hari Kerja vs Bukan Hari Kerja:
+- Pengguna Kasual: Lebih banyak menggunakan sepeda pada hari bukan kerja (akhir pekan) dibandingkan dengan hari kerja. Ini menunjukkan bahwa pengguna kasual cenderung menggunakan sepeda untuk rekreasi atau kegiatan santai selama akhir pekan.
+- Pengguna Terdaftar: Lebih aktif pada hari kerja, menunjukkan bahwa mereka lebih sering menggunakan sepeda untuk keperluan transportasi harian seperti pergi bekerja atau kegiatan rutin.
+
+Insight:
+Penggunaan Sepeda pada Hari Libur vs Bukan Hari Libur:
+- Pengguna Kasual: Jelas lebih banyak pengguna kasual yang menyewa sepeda pada hari libur, menunjukkan bahwa pengguna kasual memanfaatkan hari libur untuk aktivitas rekreasi.
+- Pengguna Terdaftar: Tidak ada perubahan signifikan antara hari libur dan bukan hari libur untuk pengguna terdaftar, yang menunjukkan pola penggunaan yang lebih stabil.
+
+Conclusion
+Bagaimana Pengaruh Cuaca terhadap Jumlah Pengguna Sepeda Kasual dan Terdaftar di Berbagai Musim?
+
+Pengguna Kasual: Pengguna kasual lebih sensitif terhadap cuaca dan musim. Jumlah pengguna kasual meningkat secara signifikan pada cuaca yang cerah dan kondisi baik, terutama di Musim Panas dan Musim Gugur. Sebaliknya, pada Musim Dingin dan saat cuaca buruk (misalnya, hujan atau salju ringan), pengguna kasual berkurang drastis.
+
+Pengguna Terdaftar: Pengguna terdaftar lebih stabil dalam penggunaan sepeda sepanjang tahun. Meskipun cuaca buruk dan musim dingin mempengaruhi mereka, pengurangan jumlah pengguna tidak se-drastis pengguna kasual. Pengguna terdaftar lebih mungkin menggunakan sepeda untuk keperluan transportasi harian seperti bekerja, sehingga mereka tidak terlalu terpengaruh oleh cuaca dibandingkan pengguna kasual.
+
+Kesimpulan Utama: Cuaca baik dan musim hangat (Musim Panas dan Musim Gugur) mendorong lebih banyak penggunaan sepeda, terutama oleh pengguna kasual. Musim Dingin dan cuaca buruk berdampak signifikan pada penurunan jumlah pengguna kasual, sementara pengguna terdaftar lebih cenderung tetap aktif meskipun dengan sedikit penurunan.
+
+Apakah Terdapat Pola Penggunaan Sepeda yang Signifikan antara Hari Kerja dan Hari Libur?
+
+Pengguna Kasual: Pengguna kasual lebih aktif pada hari bukan kerja (akhir pekan) dan hari libur. Hal ini menunjukkan bahwa pengguna kasual menggunakan sepeda terutama untuk aktivitas rekreasi dan santai, yang biasanya dilakukan pada waktu luang. 
+
+Pengguna Terdaftar:
+Pengguna terdaftar lebih aktif pada hari kerja dibandingkan hari libur atau akhir pekan. Ini menunjukkan bahwa sepeda lebih sering digunakan sebagai alat transportasi untuk keperluan harian, seperti pergi bekerja atau kegiatan rutin lainnya. Perbedaan antara hari kerja dan hari libur tidak signifikan bagi mereka.
+
+Kesimpulan Utama: Pengguna kasual lebih aktif di akhir pekan dan hari libur, yang menunjukkan bahwa penggunaan sepeda oleh mereka lebih terkait dengan rekreasi. Pengguna terdaftar lebih sering menggunakan sepeda di hari kerja, yang menunjukkan bahwa mereka menggunakan sepeda sebagai alat transportasi harian.
+

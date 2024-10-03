@@ -1,0 +1,3 @@
+workingday,recency,casual,registered,monetary_casual,monetary_registered,r_rank_norm,f_rank_norm,m_rank_norm,RFM_score,bikers_segment,bikers_segment,workingday
+Bukan Hari Kerja,1,316732,683537,316732,683537,50,100,50,3.2,Medium value customer,High value customer,1
+Hari Kerja,0,303285,1989125,303285,1989125,100,50,100,4.3,High value customer,Medium value customer,1

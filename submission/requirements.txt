@@ -1,0 +1,16 @@
+# Import library untuk manipulasi data
+import numpy as np  # Untuk operasi matematika dan array
+import pandas as pd # Untuk manipulasi dan analisis data
+
+# Import library untuk visualisasi data
+import matplotlib.pyplot as plt # Untuk membuat grafik dan visualisasi
+import seaborn as sns # Untuk visualisasi statistik
+
+# Import library untuk analisis statistik
+import scipy.stats as stats # Untuk melakukan uji statistik
+# Set default style untuk visualisasi
+sns.set(style="whitegrid")
+
+# Import data untuk analisis dari drive
+from google.colab import drive
+drive.mount('/content/drive')
