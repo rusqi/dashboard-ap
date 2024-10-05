@@ -4,8 +4,8 @@ import numpy as np
 
 
 # Memuat dataset
-day_df = pd.read_csv("day.csv")
-hour_df = pd.read_csv("hour.csv")
+day_df = pd.read_csv("./dashboard/day.csv")
+hour_df = pd.read_csv("./dashboard/hour.csv")
 
 # Menggabungkan tabel day_df dan hour_df
 day_hour_df = pd.merge(
